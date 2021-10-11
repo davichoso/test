@@ -1,0 +1,1 @@
+mongo -u $MONGO_INITDB_ROOT_USERNAME -p $MONGO_INITDB_ROOT_PASSWORD --eval "var USER = '$USER'; var USER_PASSWD = '$USER_PASSWD'; var DBNAME = '$DBNAME';" /script/create_user.js

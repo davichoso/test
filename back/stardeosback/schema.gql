@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""entidad del tipo usuarios"""
+type User {
+  _id: String!
+  title: String!
+  username: String!
+  birthDate: DateTime!
+  password: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  helloWord: String!
+
+  """funcion que retorna todos los usuarios"""
+  getUsers: [User!]!
+}
+
+type Mutation {
+  """funcion para crear al usuario"""
+  createUser(birthDate: DateTime!, email: String!, password: String!, username: String!, title: String!): User!
+}
