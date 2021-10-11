@@ -13,7 +13,7 @@ import {
 
 const client = new ApolloClient({
   uri: 'http://137.184.154.105:4000/graphql',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache({ resultCaching: false })
 });
 
 ReactDOM.render(
